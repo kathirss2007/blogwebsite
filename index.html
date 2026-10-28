@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniConnect - Kathir SS</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- LOGIN PAGE -->
+    <div id="loginPage">
+        <div class="login-card">
+            <h1>MiniConnect</h1>
+            <p>Connect • Share • Follow</p>
+
+            <input type="text" id="username"
+                   placeholder="Username">
+
+            <input type="password" id="password"
+                   placeholder="Password">
+
+            <button onclick="login()">Login</button>
+            <p id="error"></p>
+        </div>
+    </div>
+
+    <!-- MAIN APPLICATION -->
+    <div id="app">
+        <header>
+            <h2>MiniConnect</h2>
+            <button onclick="logout()">Logout</button>
+        </header>
+
+        <div class="main">
+
+            <!-- PROFILE -->
+            <div>
+                <div class="box profile-box">
+                    <div class="profile-img" id="avatar">K</div>
+
+                    <h3 id="profileName">KATHIR SS</h3>
+                    <p>@kathirss</p>
+
+                    <div class="stats">
+                        <div>
+                            <strong id="followers">125</strong>
+                            Followers
+                        </div>
+                        <div>
+                            <strong id="following">80</strong>
+                            Following
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CENTER CONTENT -->
+            <div>
+                <div class="box">
+                    <h3>Create Post</h3>
+
+                    <textarea id="postText"
+                              placeholder="What's happening?"></textarea>
+
+                    <button class="post-button"
+                            onclick="addPost()">Post</button>
+                </div>
+
+                <div class="box">
+                    <h3>Home</h3>
+
+                    <div id="posts">
+
+                        <div class="post">
+                            <h3>Alex</h3>
+                            <p>Welcome to MiniConnect!
+                               This is my first post.</p>
+
+                            <div class="actions">
+                                <button onclick="likePost(this)">
+                                    ❤️ Like <span>0</span>
+                                </button>
+                                <button onclick="commentPost()">
+                                    💬 Comment
+                                </button>
+                                <button onclick="sharePost()">
+                                    🔁 Share
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="post">
+                            <h3>Sarah</h3>
+                            <p>Learning web development
+                               is really interesting!</p>
+
+                            <div class="actions">
+                                <button onclick="likePost(this)">
+                                    ❤️ Like <span>0</span>
+                                </button>
+                                <button onclick="commentPost()">
+                                    💬 Comment
+                                </button>
+                                <button onclick="sharePost()">
+                                    🔁 Share
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- PEOPLE TO FOLLOW -->
+            <div>
+                <div class="box">
+                    <h3>People You May Know</h3>
+
+                    <div class="person">
+                        <b>Arun</b><br><br>
+                        <button class="follow-button"
+                                onclick="followUser(this)">
+                            Follow
+                        </button>
+                    </div>
+
+                    <div class="person">
+                        <b>Priya</b><br><br>
+                        <button class="follow-button"
+                                onclick="followUser(this)">
+                            Follow
+                        </button>
+                    </div>
+
+                    <div class="person">
+                        <b>Rahul</b><br><br>
+                        <button class="follow-button"
+                                onclick="followUser(this)">
+                            Follow
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
